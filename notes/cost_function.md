@@ -83,3 +83,17 @@ The algorithm is:
 $$b := b - \alpha\frac{\partial J(w, b)}{\partial b}$$
 
 It is important to note that these should be updated at the same time. Do not update w and b separately. This is because the gradient of the cost function with respect to w and b is a function of both w and b. If you update w and b separately, you will not be updating them in the correct direction.
+
+### Gradient Descent in Linear Regression
+
+We simply need to calculate the gradient of the cost function with respect to w and b. The gradient of the cost function with respect to w is:
+
+$$\frac{\partial J(w, b)}{\partial w} = \frac{1}{m}\sum_{i=1}^{m}(f_{w,b}(x^{(i)}) - y^{(i)})x^{(i)}$$
+
+And, with respect to $b$:
+
+$$\frac{\partial J(w, b)}{\partial b} = \frac{1}{m}\sum_{i=1}^{m}(f_{w,b}(x^{(i)}) - y^{(i)})$$
+
+[See derivation](https://www.coursera.org/learn/machine-learning/lecture/lgSMj/gradient-descent-for-linear-regression)
+
+Of note, when using the squared error cost function, the cost function with respect to $w$ and $b$ will always have a single global minimum. This is because the cost function is a convex function. A convex function is a function where the line segment between any two points on the function is always above the function. This means that the cost function will always have a single global minimum.
