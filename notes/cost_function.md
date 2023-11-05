@@ -36,19 +36,19 @@ It often helps to visualize the cost function. There are ways to visualize the c
 
 A two dimensional plot of the cost function is shown below. The x-axis is the value of $w$, the y-axis is the value of $b$, and the z-axis is the value of the cost function $J(w, b)$.
 
-![2D Plot](./2d_plot.webp)
+![2D Plot](./images/2d_plot.webp)
 
 ### Three-Dimensional Plot
 
 A threed dimensional plot of the cost function is shown below. The x-axis is the value of $w$, the y-axis is the value of $b$, and the z-axis is the value of the cost function $J(w, b)$.
 
-![3D Plot](./3d_plot.png)
+![3D Plot](./images/3d_plot.png)
 
 ### Contour Plot
 
 A contour plot of the cost function is shown below. The x-axis is the value of $w$, the y-axis is the value of $b$, and the z-axis is the value of the cost function $J(w, b)$. The contour plot is the one on the right, and for reference the 3D plot is on the left.
 
-![Contour Plot](./contour_plot.png)
+![Contour Plot](./images/contour_plot.png)
 
 ## Identifying the Minimum
 
@@ -58,4 +58,4 @@ The minimum of the cost function is the point where the cost function is at its 
 
 Gradient Descent is an algorithmic process of finding the minimum of a function. Gradient Descent is an iterative process. The algorithm starts at a random point, and then it takes a step in the direction of the steepest descent. The algorithm continues to take steps in the direction of the steepest descent until it reaches a point where the gradient is zero. The gradient is zero at the minimum of the function. In terms of the calculus involved, the gradient is the derivative of the function. The derivative of the function is zero at the minimum of the function.
 
-![Gradient Descent](./gradient_descent.png)
+![Gradient Descent](./images/gradient_descent.png)
