@@ -59,3 +59,27 @@ The minimum of the cost function is the point where the cost function is at its 
 Gradient Descent is an algorithmic process of finding the minimum of a function. Gradient Descent is an iterative process. The algorithm starts at a random point, and then it takes a step in the direction of the steepest descent. The algorithm continues to take steps in the direction of the steepest descent until it reaches a point where the gradient is zero. The gradient is zero at the minimum of the function. In terms of the calculus involved, the gradient is the derivative of the function. The derivative of the function is zero at the minimum of the function.
 
 ![Gradient Descent](./images/gradient_descent.png)
+
+The algorithm for gradient descent is:
+
+1. Initialize $w$ and $b$ to random values.
+2. Calculate the gradient of the cost function with respect to $w$ and $b$.
+3. Update $w$ and $b$ by subtracting the gradient from $w$ and $b$.
+4. Repeat steps 2 and 3 until the gradient is zero.
+
+Expressed mathematicaly, the algorithm is:
+
+$$w := w - \alpha\frac{\partial J(w, b)}{\partial w}$$
+
+Note that we're using the notation $:=$ to denote assignment. This is because we're updating the value of $w$ and $b$ in each iteration of the algorithm.
+
+The algorithm is repeated until the gradient is zero. The gradient is zero at the minimum of the function. In terms of the calculus involved, the gradient is the derivative of the function. The derivative of the function is zero at the minimum of the function.
+
+The term $\alpha$ is the learning rate. The learning rate is a hyperparameter that controls how fast the algorithm converges. If the learning rate is too small, the algorithm will take a long time to converge. If the learning rate is too large, the algorithm will not converge.
+
+The bias value b is updated in the same way as the weight value w.
+The algorithm is:
+
+$$b := b - \alpha\frac{\partial J(w, b)}{\partial b}$$
+
+It is important to note that these should be updated at the same time. Do not update w and b separately. This is because the gradient of the cost function with respect to w and b is a function of both w and b. If you update w and b separately, you will not be updating them in the correct direction.
