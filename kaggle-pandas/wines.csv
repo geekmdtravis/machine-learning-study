@@ -1,6 +1,6 @@
-Unnamed: 0, country, price, comments
-0, USA, 55, comments 1
-1, Canada, NaN, comments 2
-2, Brazil, 33, comments 3
-3, NaN, 73, comments 4
-4, USA, 37, comments 5
+Unnamed: 0, country, price, points, comments
+0, USA, 55, 100, comments 1
+1, Canada, NaN, 95, comments 2
+2, Brazil, 33, 83, comments 3
+3, , 73, 33, comments 4
+4, USA, 37, 32, comments 5
