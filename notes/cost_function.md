@@ -97,3 +97,21 @@ $$\frac{\partial J(w, b)}{\partial b} = \frac{1}{m}\sum_{i=1}^{m}(f_{w,b}(x^{(i)
 [See derivation](https://www.coursera.org/learn/machine-learning/lecture/lgSMj/gradient-descent-for-linear-regression)
 
 Of note, when using the squared error cost function, the cost function with respect to $w$ and $b$ will always have a single global minimum. This is because the cost function is a convex function. A convex function is a function where the line segment between any two points on the function is always above the function. This means that the cost function will always have a single global minimum.
+
+### Gradient Descent in Multiple Variable Linear Regression
+
+$$\frac{\partial J(w, b)}{\partial w} = \frac{1}{m}\sum_{i=1}^{m}(f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})x^{(i)}$$
+
+And, with respect to $b$:
+
+$$\frac{\partial J(w, b)}{\partial b} = \frac{1}{m}\sum_{i=1}^{m}(f_{\vec{w},b}(\vec{x}^{(i)}) - y^{(i)})$$
+
+Note that a vector $\vec{x}$ contains multiple members. For example, $\vec{x} = [x_1, x_2, x_3, ..., x_n]$. The vector $\vec{w}$ is the same. The vector $\vec{w}$ contains the weights for each member of the vector $\vec{x}$. For example, $\vec{w} = [w_1, w_2, w_3, ..., w_n]$.
+
+### Normal Equation as an Alternative to Gradient Descent
+
+Multiple variable linear regression can be solved using the normal equation. The normal equation is:
+
+$$\vec{w} = (X^TX)^{-1}X^T\vec{y}$$
+
+where $X$ is the matrix of samples, $\vec{y}$ is the vector of labels, and $\vec{w}$ is the vector of weights.
