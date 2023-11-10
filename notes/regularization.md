@@ -1,4 +1,4 @@
-# Regularization of the $w$ parameters
+# Regularization of the $w$ parameters for Linear Regression
 
 In order to avoid over-fitting, we can employ regularization. The regularization term is added to the cost function $J(w, b)$. The regularization term is:
 
@@ -34,3 +34,21 @@ Updating looks like:
 
 $$w := w - \alpha\left(\frac{\partial J(w, b)}{\partial w}\right)$$
 $$b := b - \alpha\left(\frac{\partial J(w, b)}{\partial b}\right)$$
+
+# Regularization for Logisitic Regression
+
+The cost function for logistic regression with regularization is:
+
+$$J(\vec{w},b) = -\frac{1}{m} \sum_{i=1}^{m} \left[ y^{(i)} log(f_{\vec{w},b}(x^{(i)})) + (1 - y^{(i)}) log(1 - f_{\vec{w},b}(x^{(i)})) \right] + \frac{\lambda}{2m} \sum_{j=1}^{n} w_j^2$$
+
+Where the loss function is:
+
+$$L(f_{\vec{w},b}) = -y^{(i)} log(f_{\vec{w},b}(\vec{x}^{(i)})) - (1 - y^{(i)}) log(1 - f_{\vec{w},b}(\vec{x}^{(i)}))$$
+
+The gradient of the cost function with respect to $w$ is:
+
+$$\frac{\partial J(w, b)}{\partial w} = \frac{1}{m}\sum_{i=1}^{m}(f_{w,b}(x^{(i)}) - y^{(i)})x^{(i)} + \frac{\lambda}{m}w$$
+
+And, with respect to $b$:
+
+$$\frac{\partial J(w, b)}{\partial b} = \frac{1}{m}\sum_{i=1}^{m}(f_{w,b}(x^{(i)}) - y^{(i)})$$
